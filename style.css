@@ -110,7 +110,7 @@ body {
   grid-template-columns: minmax(0, 1fr) 260px;
   gap: 56px;
   align-items: start;
-  margin-top: 56px;
+  margin-top: 40px;
 }
 
 h1 {
@@ -162,8 +162,8 @@ h1 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 32px;
-  margin-top: 64px;
-  padding-top: 20px;
+  margin-top: 36px;
+  padding-top: 18px;
   border-top: 1px solid var(--line);
   font-size: .9375rem;
   line-height: 1.65;
@@ -277,7 +277,7 @@ h1 {
 }
 
 footer {
-  margin: 72px 0 40px;
+  margin: 32px 0 24px;
   font-size: .8125rem;
   color: var(--sec);
 }
@@ -286,13 +286,13 @@ footer {
   .wrap { padding: 0 22px; }
   .hero { grid-template-columns: 1fr; gap: 32px; margin-top: 36px; }
   .portrait { order: -1; width: 200px; }
-  .contact { grid-template-columns: 1fr; gap: 20px; margin-top: 44px; }
+  .contact { grid-template-columns: 1fr; gap: 20px; margin-top: 32px; }
   .nav { order: 3; width: 100%; gap: 20px; }
   .page-title { margin-top: 36px; }
   .pdf-frame { display: none; } /* phones can't show embedded PDFs well; the link above opens it instead */
   .entry { grid-template-columns: 1fr; }
   .entry-when { text-align: left; margin-top: 2px; }
-  footer { margin-top: 48px; }
+  footer { margin-top: 28px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
