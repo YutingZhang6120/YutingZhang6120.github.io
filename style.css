@@ -53,10 +53,15 @@ body {
 :focus-visible { outline: 2px solid var(--acc); outline-offset: 3px; }
 
 .wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
   max-width: 880px;
   margin: 0 auto;
   padding: 0 32px;
 }
+.wrap > main { flex: 1; }
 
 /* header */
 .top {
@@ -105,13 +110,18 @@ body {
 :root[data-theme="dark"] .lamp .rays { display: none; }
 
 /* hero */
+/* home page: the photo and the text sit centered between the header and the contact block */
+.home { display: flex; flex-direction: column; }
+
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 260px;
   gap: 56px;
-  align-items: start;
-  margin-top: 40px;
+  align-items: center;
+  align-content: center;
+  padding: 32px 0;
 }
+.home .hero { flex: 1; }
 
 h1 {
   margin: 0;
@@ -162,7 +172,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 32px;
-  margin-top: 36px;
+  margin-top: 0;
   padding-top: 18px;
   border-top: 1px solid var(--line);
   font-size: .9375rem;
@@ -284,9 +294,9 @@ footer {
 
 @media (max-width: 720px) {
   .wrap { padding: 0 22px; }
-  .hero { grid-template-columns: 1fr; gap: 32px; margin-top: 36px; }
+  .hero { grid-template-columns: 1fr; gap: 32px;  }
   .portrait { order: -1; width: 200px; }
-  .contact { grid-template-columns: 1fr; gap: 20px; margin-top: 32px; }
+  .contact { grid-template-columns: 1fr; gap: 20px; margin-top: 0; }
   .nav { order: 3; width: 100%; gap: 20px; }
   .page-title { margin-top: 36px; }
   .pdf-frame { display: none; } /* phones can't show embedded PDFs well; the link above opens it instead */
